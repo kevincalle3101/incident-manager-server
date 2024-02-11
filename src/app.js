@@ -14,7 +14,7 @@ server.use(
     origin: "*",
     methods: "GET,PUT,POST,DELETE",
     credentials: true,
-    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept"
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, x-access-token"
   })
 );
 server.use((req, res, next) => {

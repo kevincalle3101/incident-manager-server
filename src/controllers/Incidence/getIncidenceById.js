@@ -24,7 +24,7 @@ const getIncidenceByIdHandler = async (req, res) => {
         if (!user.isAdmin && incidence.UserId !== userId) {
             return res.status(403).json({ error: 'Este usuario no tiene acceso a esta incidencia' });
         }
-        res.status(200).json({ incidence });
+        res.status(200).json( incidence );
     } catch(error) {
         console.error('Error al obtener la incidencia:', error);
         res.status(500).json({ error: 'Ocurrió un error en el servidor' });

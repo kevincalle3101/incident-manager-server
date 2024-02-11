@@ -1,4 +1,4 @@
-const { Incidence } = require('../../db');
+const { Incidence, User } = require('../../db');
 
 const filterIncidencesHandler = async (req, res) => {
     const { filter } = req.params;
@@ -24,13 +24,19 @@ const filterIncidencesHandler = async (req, res) => {
         const filteredIncidences = await Incidence.findAll({
             where: filterOptions,
             order: [['createdAt', orderDirection]],
+            include: [
+                {
+                    model: User,
+                    attributes: ['name']
+                }
+            ]
         });
 
         if(!filteredIncidences.length){
             return res.status(404).json({ error: 'No se encontraron incidencias' });
         }
 
-        res.status(200).json({ incidences: filteredIncidences });
+        res.status(200).json( incidences = filteredIncidences );
     } catch (error) {
         console.error('Error al filtrar las incidencias:', error);
         res.status(500).json({ error: 'Ha ocurrido un error en el servidor' });
