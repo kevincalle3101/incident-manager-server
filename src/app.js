@@ -13,11 +13,11 @@ server.use(
   cors({
     origin: "*",
     methods: "GET,PUT,POST,DELETE",
-    credentials: true
+    credentials: true,
   })
 );
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://incident-manager-client.vercel.app");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, x-access-token");
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
