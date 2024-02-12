@@ -104,7 +104,7 @@ if(!transporter){
                 y necesita de tu ayuda para poder resolverla</p>
                 <p class="message">No olvides que si hay alguna duda al respecto deja un comentario en la incidencia.</p>
                 <p class="message">Haz click en el botón de abajo para ir directamente al sitio y atenderlo ahora.</p>
-                <a class="cta-button" href="https://tu-suenio-front.vercel.app/">Visitar Incidencias App</a>
+                <a class="cta-button" href="https://incident-manager-client.vercel.app">Visitar Incidencias App</a>
             </div>
             <div class="footer">
                 <p>© 2024 Incidencias App. Todos los derechos reservados.</p>
